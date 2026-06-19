@@ -17,17 +17,17 @@ export default function TodoForm({ onAdd }: TodoFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit} class="flex gap-2 mb-6">
+    <form onSubmit={handleSubmit} className="flex gap-2 mb-6">
       <input
         type="text"
         value={text}
-        onChange={(e: any) => setText(e.target.value)}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setText(e.target.value)}
         placeholder="Add a new task..."
-        class="flex-1 px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all bg-white shadow-sm"
+        className="flex-1 px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all bg-white shadow-sm"
       />
       <button
         type="submit"
-        class="bg-primary hover:bg-primary-dark text-white p-3 rounded-xl transition-colors shadow-md shadow-blue-200 flex items-center justify-center"
+        className="bg-primary hover:bg-primary-dark text-white p-3 rounded-xl transition-colors shadow-md shadow-blue-200 flex items-center justify-center"
         aria-label="Add todo"
       >
         <Plus size={24} />
